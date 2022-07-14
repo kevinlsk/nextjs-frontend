@@ -24,7 +24,7 @@ function FeatureItem({ className = '', imageSrc, imageAlt, imagePosition = 'left
         {children}
       </Col>
       <Col className="order-1 order-md-2">
-        <div className="float-none float-md-right">
+        <div className="float-left">
           <Image width={400} height={300} src={imageSrc} alt={imageAlt} />
         </div>
       </Col>
@@ -48,7 +48,7 @@ export default function FeatureSection() {
         <p className="mt-3">{t("common:landing-feature-section-item1-content")}</p>
         <Button variant="primary" href={decorateLinkWithLocale("/features", lang)}>{t("common:general-learn-more")}</Button>
       </FeatureItem>
-      <FeatureItem className="mt-6" imageSrc="/undraw_User_flow_re_bvfx.svg" imageAlt="easy to use UI">
+      <FeatureItem className="mt-6" imageSrc="/undraw_User_flow_re_bvfx.svg" imageAlt="easy to use UI" imagePosition='right'>
         <h2>{t("common:landing-feature-section-item2-title")}</h2>
         <p className="mt-3">{t("common:landing-feature-section-item2-content")}</p>
         <Button variant="primary" href={decorateLinkWithLocale("/features", lang)}>{t("common:general-learn-more")}</Button>

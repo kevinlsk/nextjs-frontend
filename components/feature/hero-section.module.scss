@@ -1,0 +1,30 @@
+/* import only the necessary Bootstrap files */
+@import "~styles/custom-bootstrap.scss";
+
+.jumbotron {
+  background: map-get($map: $theme-colors, $key: "secondary");
+  height: 30rem;
+}
+
+@include media-breakpoint-up(md) {
+  .jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    background: map-get($map: $theme-colors, $key: "secondary");
+    height: 20rem;
+    width: 100%;
+  }
+
+  .jumbotron {
+    background: map-get($map: $theme-colors, $key: "secondary");
+    border-radius: 100%;
+    width: 120%;
+    height: 35rem;
+    top: 0rem;
+    left: -10%;
+    right: 0;
+    position: relative;
+    border-bottom: 20px solid rgba($white, 0.5);
+  }
+}

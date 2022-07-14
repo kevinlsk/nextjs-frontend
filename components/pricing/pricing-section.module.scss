@@ -1,0 +1,20 @@
+@import "~styles/custom-bootstrap";
+
+.priceRow {
+  height: 7rem;
+}
+
+.pricingList li {
+  position: relative;
+  margin-bottom: .5rem;
+  padding-left: 1rem;
+}
+
+.pricingList li::before {
+  content: "";
+  background-image: url(/checkmark.png);
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: -.8rem;
+}

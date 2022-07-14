@@ -1,0 +1,27 @@
+@import '~styles/custom-bootstrap.scss';
+
+.quoteContainer {
+  position: relative;
+}
+
+.quoteContainer::before {
+  content: '“';
+  position: absolute;
+  margin-top: -4.2rem;
+  font-size: 5rem;
+  font-weight: bold;
+  color: rgba($color: $gray-400, $alpha: .4);
+  font-family: serif;
+  left: -4px;
+  z-index: -1;
+}
+
+.customerTitle {
+  font-family: $x-font-family-serif;
+  color: $gray-600;
+  line-height: 1rem;
+}
+
+.avatar {
+  border-radius: 50%;
+}

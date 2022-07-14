@@ -1,0 +1,31 @@
+@import "~styles/custom-bootstrap.scss";
+
+.navBar {
+  background-color: rgba(color("white"), 0.95);
+}
+
+.navLink {
+  padding-right: 2rem !important;
+}
+
+.loginButton {
+  color: theme-color("primary") !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+
+  &:active {
+    background-color: transparent !important;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.roleTitle {
+  font-size: 2rem;
+}

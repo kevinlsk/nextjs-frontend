@@ -1,0 +1,33 @@
+@import "~styles/custom-bootstrap";
+
+$cardHeaderPaddingY: 1.5rem;
+
+.cardHeader {
+  padding-top: $cardHeaderPaddingY;
+  padding-bottom: $cardHeaderPaddingY;
+  padding-right: 3rem;
+  font-size: 1.1rem;
+}
+
+.cardHeader:hover {
+  cursor: pointer;
+}
+
+.cardHeader::after {
+  content: "";
+  display: block;
+  border-left: 3px solid theme-color("primary");
+  border-top: 3px solid theme-color("primary");
+  top: 2.3rem;
+  height: 16px;
+  width: 16px;
+  right: 30px;
+  position: absolute;
+  transform: translate(50%, -50%) rotate(135deg);
+  transition-duration: 0.3s;
+}
+
+.cardHeaderExpanded::after {
+  transform: translate(50%, -50%) rotate(225deg);
+  transition-duration: 0.3s;
+}

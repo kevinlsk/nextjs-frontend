@@ -1,0 +1,60 @@
+/* import only the necessary Bootstrap files */
+@import "~styles/custom-bootstrap.scss";
+
+.jumbotron {
+  // background: map_get($theme-colors, "secondary");
+  background: $white;
+}
+
+.imageContainer {
+  margin-top: 1.5rem;
+}
+
+@include media-breakpoint-up(md) {
+  .imageContainer {
+    margin-left: -7rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .imageContainer {
+    margin-left: -11rem;
+  }
+}
+
+// .mymaskImage {
+//   width: 500px;
+//   height: 375px;
+//   background-color: map_get($theme-colors, "primary");
+//   background-image: url(/hero_500x375.png);
+//   background-blend-mode: luminosity;
+// }
+
+// .imageContainer {
+//   // width: 500px;
+//   // height: 375px;
+//   background-color: map_get($theme-colors, "primary");
+// }
+
+// .image {
+//   mix-blend-mode: luminosity;
+// }
+
+
+// @include media-breakpoint-up(lg) {
+//   .jumbotron {
+//     background: linear-gradient(280deg, map_get($theme-colors, "primary") 45%, map_get($theme-colors, "secondary") 46%);
+//     // background: linear-gradient(309deg, $white 30%, map_get($theme-colors, "secondary") 70%);
+//   }
+// }
+
+// @include media-breakpoint-up(lg) {
+//   .jumbotron {
+//     background: linear-gradient(280deg, map_get($theme-colors, "primary") 45%, map_get($theme-colors, "secondary") 46%);
+//     // background: linear-gradient(309deg, $white 30%, map_get($theme-colors, "secondary") 70%);
+//     background-color: map_get($theme-colors, "secondary");
+//     background-image: url(/AdobeStock_286444757_Preview.png);
+//     background-blend-mode: luminosity;
+//     background-size: cover;
+//   }
+// }

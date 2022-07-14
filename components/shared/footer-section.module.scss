@@ -1,0 +1,19 @@
+@import "~styles/custom-bootstrap.scss";
+
+.a {
+  color: $gray-300;
+}
+
+.a:hover {
+  color: darken($gray-300, 30%);
+}
+
+.footerContainer {
+  height: 40rem;
+}
+
+@include media-breakpoint-up(md) {
+  .footerContainer {
+    height: 25rem;
+  }  
+}

@@ -1,0 +1,39 @@
+@import "~styles/custom-bootstrap";
+
+.stepperItemIndex {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  color: transparent;  
+  text-shadow: 0 0 0 white;
+}
+
+.stepperItemName {
+  line-height: 1rem;
+}
+
+.stepperItem {
+  width: 5rem;
+}
+
+.inactiveStepperItem {
+  &BackgroundColor {
+    background-color: $gray-400 !important;
+  }
+
+  &Color {
+    color: $gray-400 !important;
+  }
+}
+
+.stepperItemSeparator {
+  height: 0.4rem;
+}
+
+@include media-breakpoint-up(lg) {
+  .stepperItemSeparator {
+    height: 0.4rem;
+    min-width: 3rem;
+  }
+}

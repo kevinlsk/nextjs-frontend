@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Menu from './menu';
 import FooterSection from './shared/footer-section';
-import { useTranslation } from 'next-translate';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function Layout(props) {
   const { t, lang } = useTranslation();

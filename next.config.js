@@ -1,8 +1,7 @@
-const { locales, defaultLocale } = require('./i18n.json');
+const nextTranslate = require("next-translate");
 
-module.exports = {
+module.exports = nextTranslate({
   images: {
     domains: ['via.placeholder.com'],
   },
-  i18n: { locales, defaultLocale },
-}
+})

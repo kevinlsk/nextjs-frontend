@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next-translate && NODE_OPTIONS='--inspect' next dev -p 3100",
+    "dev": "NODE_OPTIONS='--inspect' next dev -p 3100",
     "prod:start": "next start -p 3100",
     "prod:build": "next-translate && next build",
     "prod:deploy": "tar --exclude='node_modules/' --exclude='.git/' -czf - . | ssh node@scu-server 'cd ~; DEST_DIR=~/scu_web; rm -rf $DEST_DIR; mkdir -p $DEST_DIR; tar xzf - -C $DEST_DIR; cd $DEST_DIR && yarn install -s'",
@@ -17,7 +17,7 @@
     "classnames": "^2.2.6",
     "cookie": "^0.4.1",
     "next": "10.0.1",
-    "next-translate": "^0.20.2",
+    "next-translate": "~1.0",
     "nookies": "^2.5.0",
     "react": "17.0.0",
     "react-bootstrap": "^1.4.0",

@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev -p 3100",
     "prod:start": "next start -p 3100",
-    "prod:build": "next-translate && next build",
+    "prod:build": "next build",
     "prod:deploy": "tar --exclude='node_modules/' --exclude='.git/' -czf - . | ssh node@scu-server 'cd ~; DEST_DIR=~/scu_web; rm -rf $DEST_DIR; mkdir -p $DEST_DIR; tar xzf - -C $DEST_DIR; cd $DEST_DIR && yarn install -s'",
     "remote-prod:start": "ssh node@scu-server 'cd ~/scu_web; pm2 stop scu-web; yarn prod:build; pm2 restart --update-env ~/.scu-server/scu-web-ecosystem.config.js'"
   },
@@ -19,14 +19,19 @@
     "next": "^12.2.2",
     "next-translate": "^1.5.0",
     "nookies": "^2.5.0",
-    "react": "^18.2.0",
+    "react": "~17",
     "react-bootstrap": "~1.6",
-    "react-dom": "^18.2.0",
+    "react-dom": "~17",
     "sass": "^1.29.0"
   },
   "devDependencies": {
     "@types/node": "~16",
-    "@types/react": "^16.9.53",
-    "typescript": "^4.0.3"
+    "@types/react": "^17.0.47",
+    "eslint": "8.19.0",
+    "eslint-config-next": "12.2.2",
+    "typescript": "^4.7.4"
+  },
+  "resolutions": {
+    "@types/react": "^17.0.47"
   }
 }

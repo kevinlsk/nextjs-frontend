@@ -9,4 +9,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
 
+      - name: Build
+        run: |
+          yarn install
+          yarn prod:build
+          yarn run next export
+          touch out/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        run: echo deploy
+          

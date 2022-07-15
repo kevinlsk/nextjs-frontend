@@ -8,8 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node with yarn
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: 'yarn'
@@ -22,5 +25,6 @@ jobs:
           touch out/.nojekyll
 
       - name: Deploy to GitHub Pages
-        run: echo deploy
-          
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: out
